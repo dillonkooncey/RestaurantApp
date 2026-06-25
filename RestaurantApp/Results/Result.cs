@@ -1,15 +1,25 @@
 ﻿namespace RestaurantApp.Results
 {
-    // Class used to return objects throughout the project with a boolean result and string reason that can be default
     public class Result
     {
-        public bool ResultValue;
-        public string Reason;
+        public bool Success { get; set; }
+        public string Reason { get; set; }
 
-        public Result(bool result, string reason = "")
+        public Result(bool success, string reason = "")
         {
-            this.ResultValue = result;
-            this.Reason = reason;
+            Success = success;
+            Reason = reason;
+        }
+    }
+
+    public class Result<T> : Result
+    {
+        public T? Data { get; set; }
+
+        public Result(bool success, string reason = "", T? data = default)
+            : base(success, reason)
+        {
+            Data = data;
         }
     }
 }
