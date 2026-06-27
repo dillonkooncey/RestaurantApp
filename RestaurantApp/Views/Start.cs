@@ -1,23 +1,23 @@
 ﻿using RestaurantApp.Controllers;
-using RestaurantApp.Results;
+using RestaurantApp.Models.Results;
+using RestaurantApp.Models;
 namespace RestaurantApp.Views
 {
     public class Start
     {
         public void StartApp()
         {
-            Console.WriteLine("Welcome to the Restaurant App!");
-            Console.WriteLine("Enter username:");
+            TablesController control = new TablesController();
 
-            // Create a string variable and get user input from the keyboard and store it in the variable
-            string username = Console.ReadLine();
+            DBResult<Table> result = control.getTableAvailabilityByPersonCount(4);
 
-            Console.WriteLine("Enter password:");
-
-            // Create a string variable and get user input from the keyboard and store it in the variable
-            string password = Console.ReadLine();
-
-
+            if(result.Passed)
+            {
+                Console.WriteLine("There is a table available");
+            } else
+            {
+                Console.WriteLine("No tables available at this time");
+            }
         }
     }
 }
