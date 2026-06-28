@@ -62,5 +62,13 @@ namespace RestaurantApp.Database
                 return new DBResult<User>(false, $"Connection to DB Failed: {ex.Message}");
             }
         }
+
+        // Add User
+
+        // Update User
+
+        // Remove User
+
+        // Approve User Access
     }
 }
