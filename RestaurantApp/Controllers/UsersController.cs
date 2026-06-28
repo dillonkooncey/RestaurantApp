@@ -32,10 +32,5 @@ namespace RestaurantApp.Controllers
 
             return result;
         }
-
-        public User? GetCurrentUser()
-        {
-            return currentUser;
-        }
     }
 }
