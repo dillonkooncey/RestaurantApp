@@ -5,7 +5,7 @@ static class Program
 {
     static void Main()
     {
-        Start appStart = new Start();
+        UsersView appStart = new UsersView();
         appStart.StartApp();
         //const string connectionString =
         //    "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=aspnet-NetFlixApplication-f48077b8-8a4d-4abe-a72f-6c2cc190875e;Integrated Security=True;";
