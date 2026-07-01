@@ -1,6 +1,8 @@
 ﻿using RestaurantApp.Database;
 using RestaurantApp.Models;
+using RestaurantApp.Models.Enumerations;
 using RestaurantApp.Models.Results;
+using RestaurantApp.Views;
 
 namespace RestaurantApp.Controllers
 {
